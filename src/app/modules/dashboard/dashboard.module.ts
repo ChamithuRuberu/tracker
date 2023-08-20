@@ -7,6 +7,7 @@ import { DashboardContextComponent } from './components/dashboard-context/dashbo
 import { DefaultComponent } from './components/default/default.component';
 import { DashboardHeaderComponent } from './components/dashboard-header/dashboard-header.component';
 import {FormsModule} from "@angular/forms";
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {FormsModule} from "@angular/forms";
     DashboardContextComponent,
     DefaultComponent,
     DashboardHeaderComponent,
+    FileUploadComponent,
 
   ],
   imports: [
