@@ -52,7 +52,8 @@ export class AuthService {
   //forgotPassword
   forgotPassword(email:string){
     this.fireauth.sendPasswordResetEmail(email).then(()=>{
-      this.router.navigate(['/varifyemail']);
+      this.router.navigate(['/security/login']);
+      alert("Please Check Your Inbox")
     },error=>{
       alert('something went wrong');
     })
