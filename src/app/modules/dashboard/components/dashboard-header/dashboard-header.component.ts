@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {user} from "@angular/fire/auth";
 
 @Component({
   selector: 'app-dashboard-header',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-header.component.scss']
 })
 export class DashboardHeaderComponent {
-
+  protected readonly user = user;
 }

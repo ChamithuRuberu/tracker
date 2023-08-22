@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../../../shared/auth.service";
 import {Student} from "../../../../model/student";
 import {DataService} from "../../../../shared/data.service";
+import {signOut} from "@angular/fire/auth";
 
 @Component({
   selector: 'app-default',
@@ -29,9 +30,9 @@ export class DefaultComponent implements OnInit{
     this.getAllStudents();
   }
 
-  // register() {
-  //   this.auth.logout();
-  // }
+  register() {
+    this.auth.signout();
+  }
 
   getAllStudents() {
 
@@ -84,4 +85,6 @@ export class DefaultComponent implements OnInit{
     }
   }
 
+    protected readonly signOut = signOut;
 }
+

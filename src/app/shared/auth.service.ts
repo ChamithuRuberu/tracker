@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {Router} from "@angular/router";
-import { GoogleAuthProvider } from '@angular/fire/auth';
+import {Auth, authState, GoogleAuthProvider} from '@angular/fire/auth';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
 
   constructor(private  fireauth:AngularFireAuth,private router:Router) { }
 
@@ -30,7 +31,7 @@ export class AuthService {
   //signup
   signup(email:string,password:string){
     this.fireauth.createUserWithEmailAndPassword(email,password).then(res=>{
-      alert("done");
+
       this.router.navigate(['/security/login']);
       this.sendEmailForVerification(res.user);
     },error=>{
@@ -78,6 +79,9 @@ export class AuthService {
     }, err => {
       alert(err.message);
     })
+
+
   }
+
 
 }
