@@ -9,7 +9,7 @@ import {AuthService} from "../../../../shared/auth.service";
 })
 export class DashboardHeaderComponent {
 
-  first_name:string="chamithu";
+  first_name:string="Chamithu";
   constructor(private auth: AuthService){}
   register() {
     this.auth.signout();
