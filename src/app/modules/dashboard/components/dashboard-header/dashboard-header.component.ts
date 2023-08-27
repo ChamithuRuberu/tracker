@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {user} from "@angular/fire/auth";
+import {AuthService} from "../../../../shared/auth.service";
 
 @Component({
   selector: 'app-dashboard-header',
@@ -7,5 +8,11 @@ import {user} from "@angular/fire/auth";
   styleUrls: ['./dashboard-header.component.scss']
 })
 export class DashboardHeaderComponent {
-  protected readonly user = user;
+
+  first_name:string="chamithu";
+  constructor(private auth: AuthService){}
+  register() {
+    this.auth.signout();
+  }
+
 }
